@@ -1,6 +1,7 @@
 public class User extends Human{
     private int _accountNumber = 0;
     private int _creditAmount = 200;
+    private boolean _canGetCredits = true;
     private int _balance = 200;
 
     public int getAccountNumber() {
@@ -25,5 +26,13 @@ public class User extends Human{
 
     public void set_balance(int balance) {
         _balance = balance;
+    }
+
+    public boolean get_canGetCredits() {
+        return _canGetCredits;
+    }
+
+    public void set_canGetCredits(boolean canGetCredits) {
+        _canGetCredits = canGetCredits;
     }
 }
