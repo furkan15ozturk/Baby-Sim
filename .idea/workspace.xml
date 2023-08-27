@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e11cecc-011b-4b65-9b35-dacbb7454da7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/Baby Sim..iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/src/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baby Sim/src/Main.java" afterDir="false" />
+    <list default="true" id="7e11cecc-011b-4b65-9b35-dacbb7454da7" name="Changes" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Baby Sim" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2UWc9H1mGLkW88nycQXnwxr3mmM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,14 +41,44 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Java/OOP/src/Student.java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "D:/Java/Baby Sim/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Human" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Human" />
+      <module name="Baby Sim." />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Baby Sim." />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Human" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Human" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,8 +87,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693058627377</updated>
-      <workItem from="1693058628387" duration="1243000" />
+      <workItem from="1693058628387" duration="3898000" />
+      <workItem from="1693077423998" duration="1711000" />
+      <workItem from="1693080839955" duration="225000" />
+      <workItem from="1693157616441" duration="490000" />
+      <workItem from="1693158128662" duration="1023000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1693060031457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693060031457</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,5 +117,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>
