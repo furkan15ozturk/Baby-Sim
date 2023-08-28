@@ -28,7 +28,7 @@ public class User extends Human{
         _balance = balance;
     }
 
-    public boolean get_canGetCredits() {
+    public boolean is_canGetCredits() {
         return _canGetCredits;
     }
 
