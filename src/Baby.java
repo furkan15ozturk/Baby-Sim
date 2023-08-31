@@ -1,51 +1,59 @@
 public class Baby extends Human{
-    private boolean _dirtyDiapers = false;
-    private boolean _hungry = false;
-    private boolean _hasGas = false;
-    private boolean _canEat = true;
-    private int _eatingLimit = 5;
+    private boolean dirtyDiapers = false;
+    private boolean hungry = false;
+    private boolean hasGas = false;
+    private boolean canEat = true;
+    private int eatingLimit = 5;
+    private String babyState = null;
 
-    public boolean is_dirtyDiapers() {
-        return _dirtyDiapers;
+    public boolean isDirtyDiapers() {
+        return dirtyDiapers;
     }
 
-    public void set_dirtyDiapers(boolean dirtyDiapers) {
-        _dirtyDiapers = dirtyDiapers;
+    public void setDirtyDiapers(boolean dirtyDiapers) {
+        this.dirtyDiapers = dirtyDiapers;
     }
 
-    public boolean is_hungry() {
-        return _hungry;
+    public boolean isHungry() {
+        return hungry;
     }
 
-    public void set_hungry(boolean hungry) {
-        _hungry = hungry;
+    public void setHungry(boolean hungry) {
+        this.hungry = hungry;
     }
 
-    public boolean is_hasGas() {
-        return _hasGas;
+    public boolean isHasGas() {
+        return hasGas;
     }
 
-    public void set_hasGas(boolean hasGas) {
-        _hasGas = hasGas;
+    public void setHasGas(boolean hasGas) {
+        this.hasGas = hasGas;
     }
 
-    public boolean is_canEat() {
-        return _canEat;
+    public boolean isCanEat() {
+        return canEat;
     }
 
-    public void set_canEat(boolean canEat) {
-        _canEat = canEat;
+    public void setCanEat(boolean canEat) {
+        this.canEat = canEat;
     }
 
-    public int get_eatingLimit() {
-        return _eatingLimit;
+    public int getEatingLimit() {
+        return eatingLimit;
     }
 
-    public void set_eatingLimit(int eatingLimit) {
-        _eatingLimit = eatingLimit;
+    public void setEatingLimit(int eatingLimit) {
+        this.eatingLimit = eatingLimit;
     }
 
-    public enum babyStatus{
-        Happy, Sad, Crying, Angry, Laughing
+    public String getBabyState() {
+        return babyState;
+    }
+
+    public void setBabyState(String babyState) {
+        this.babyState = babyState;
+    }
+    public void setBabyState(Events.events event) {
+        this.babyState = event.name();
     }
 }

@@ -1,54 +1,70 @@
 public class Human {
-    private String _name = null;
-    private String _surname = null;
-    private String _phases = null;
-    private int _age = 0;
+    private String name = null;
+    private String surname = null;
+    private String gender = null;
+    private String phases = null;
+    private int age = 0;
 
     public Human(){
 
     }
     public Human (String name, Phases phases){
-        set_name(name);
-        set_phases(phases);
+        setName(name);
+        setPhases(phases);
     }
 
-    public void set_name(String name) {
-        _name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void set_surname(String surname){
-        _surname = surname;
+    public void setSurname(String surname){
+        this.surname = surname;
     }
 
-    public void set_phases(String phases) {
-        _phases = phases;
+    public void setPhases(String phases) {
+        this.phases = phases;
     }
-    public void set_phases(Phases phases) {
-        _phases = phases.name();
-    }
-
-    public void set_age(int age) {
-        _age = age;
+    public void setPhases(Phases phases) {
+        this.phases = phases.name();
     }
 
-    public String get_name() {
-        return _name;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String get_surname() {
-        return _surname;
+    public String getName() {
+        return name;
     }
 
-    public String get_phases() {
-        return _phases;
+    public String getSurname() {
+        return surname;
     }
 
-    public int get_age() {
-        return _age;
+    public String getPhases() {
+        return phases;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    public void setGender(Gender gender) {
+        this.gender = gender.name();
     }
 
     public enum Phases{
         Baby, Child, Teenage, Adult, Old
+    }
+
+    public enum Gender{
+        Male, Female
     }
 
 }

@@ -1,38 +1,38 @@
 public class User extends Human{
-    private int _accountNumber = 0;
-    private int _creditAmount = 200;
-    private boolean _canGetCredits = true;
-    private int _balance = 200;
+    private int accountNumber = 0;
+    private int creditAmount = 200;
+    private boolean canGetCredits = true;
+    private int balance = 200;
 
     public int getAccountNumber() {
-        return _accountNumber;
+        return accountNumber;
     }
 
     public void setAccountNumber(int accountNumber) {
-        _accountNumber = accountNumber;
+        this.accountNumber = accountNumber;
     }
 
     public int get_creditAmount() {
-        return _creditAmount;
+        return creditAmount;
     }
 
     public void set_creditAmount(int creditAmount) {
-        _creditAmount = creditAmount;
+        this.creditAmount = creditAmount;
     }
 
     public int get_balance() {
-        return _balance;
+        return balance;
     }
 
     public void set_balance(int balance) {
-        _balance = balance;
+        this.balance = balance;
     }
 
     public boolean is_canGetCredits() {
-        return _canGetCredits;
+        return canGetCredits;
     }
 
     public void set_canGetCredits(boolean canGetCredits) {
-        _canGetCredits = canGetCredits;
+        this.canGetCredits = canGetCredits;
     }
 }
