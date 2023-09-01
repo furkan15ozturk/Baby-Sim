@@ -1,5 +1,6 @@
 import java.util.Objects;
 import java.util.Random;
+import java.lang.Thread;
 import java.util.Scanner;
 
 
@@ -18,10 +19,12 @@ public class Main {
 
         System.out.println("Your name: ");
         String yourName = input.next();
+        input.nextLine();
         parent.setName(yourName);
 
         System.out.println("Your surname: ");
         String yourSurname = input.next();
+        input.nextLine();
         parent.setSurname(yourSurname);
 
         System.out.println("Your age:");
@@ -69,39 +72,63 @@ public class Main {
                 System.exit(0);
             }
             case 1 -> {
+                //*********************************** Baby 1 ***********************************
+                baby[0] = babyCreator(parent);
 
-                //Baby 1
-                baby[0] = new Baby();
-                System.out.println("What would you name your baby, your successor, your only sprout?");
-                String babyName = input.next();
-                baby[0].setName(babyName);
-                System.out.println("Remember! Your baby is your successor. Thus, your baby has the same surname as you.");
-                System.out.println("What gender is your baby?");
-                System.out.println("Your gender:\nChoose 1 for male, 2 for female.");
+            }
+            case 2 -> {
+                //*********************************** Baby 1 ***********************************
+                baby[0] = babyCreator(parent);
 
-                int babyGenderChoice = input.nextInt();
+                //*********************************** Baby 2 ***********************************
+                baby[1] = babyCreator(parent);
+            }
+            case 3 -> {
+                //*********************************** Baby 1 ***********************************
+                baby[0] = babyCreator(parent);
 
-                switch (babyGenderChoice){
-                    case 1:
-                        System.out.println("Your baby's gender is male.");
-                        baby[0].setGender(Human.Gender.Male);
-                    case 2:
-                        System.out.println("Your baby's gender is female.");
-                        baby[0].setGender(Human.Gender.Female);
-                }
-                baby[0].setSurname(parent.getSurname());
-                baby[0].setAge(0);
-                baby[0].setBabyState(Events.events.babySleeping);
-                System.out.println("You have made a baby... But how did- anyway. Congratulations!");
-                System.out.println("Your baby is sleeping. Don't wake up your baby, or else he will wake up and cry!\nNo, no! Don't do that! Do you really want to wake up your baby? (Say yes if you would like to wake your baby!)");
-                String wakeBaby = input.next();
-                if(wakeBaby.toLowerCase().contains("yes") || wakeBaby.toLowerCase().contains("yeah") || wakeBaby.toLowerCase().contains("sure") || wakeBaby.toLowerCase().contains("of course")){
-                    baby[0].setBabyState(Events.events.babyCrying);
-                    System.out.println("Oh, that's great. You made your baby cry. What a great parent you are!");
-                }else {
-                    System.out.println("Oh, nice. The baby really should be sleeping right now.");
-                }
+                //*********************************** Baby 2 ***********************************
+                baby[1] = babyCreator(parent);
 
+                //*********************************** Baby 3 ***********************************
+                baby[2] = babyCreator(parent);
+
+            }
+        }
+
+        System.out.println("Remember! Your baby is your successor. Thus, your baby has the same surname as you.");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("You have made a baby, or babies... But how did- anyway. Congratulations!");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Your baby/babies is/are sleeping. Don't wake up your baby, or else he will wake up and cry!");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Would you like to see your baby's information?");
+        String checkBabyInfo = input.next();
+        if (removePunctuations(checkBabyInfo).toLowerCase().contains("yes") || removePunctuations(checkBabyInfo).toLowerCase().contains("yeah") || removePunctuations(checkBabyInfo).toLowerCase().contains("of course")){
+            System.out.println("Here is your baby's information:");
+            for(int i=0; i<baby.length; i++) {
+                System.out.println("Baby's Name: " + baby[i].getName());
+
+                System.out.println("Baby's Surname: " + baby[i].getSurname());
+
+                System.out.println("Baby's Age: " + baby[i].getAge());
+
+                System.out.println("Baby's Gender: " + baby[i].getGender());
+
+                System.out.println("Baby's State: " + baby[i].getBabyState());
             }
         }
 
@@ -132,4 +159,42 @@ public class Main {
             human.setPhases(Human.Phases.Old);
     }
 
+    public static Baby babyCreator(Parent parent){
+        Scanner input = new Scanner(System.in);
+        Baby baby = new Baby();
+
+        System.out.println("What would you name your baby?");
+        String firstBabyName = input.next();
+        input.nextLine();
+        baby.setName(firstBabyName);
+        System.out.println("What gender is your baby?");
+        System.out.println("Choose 1 for male, 2 for female.");
+
+        int firstBabyGenderChoice = input.nextInt();
+        input.nextLine();
+
+        switch (firstBabyGenderChoice){
+            case 1:
+                System.out.println("Your baby's gender is male.");
+                baby.setGender(Human.Gender.Male);
+            case 2:
+                System.out.println("Your baby's gender is female.");
+                baby.setGender(Human.Gender.Female);
+        }
+        baby.setSurname(parent.getSurname());
+        baby.setAge(0);
+        baby.setBabyState(Events.events.babySleeping);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(" ");
+
+        return baby;
+    }
+
+    public static String removePunctuations(String source) {
+        return source.replaceAll("[!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]", "");
+    }
 }
